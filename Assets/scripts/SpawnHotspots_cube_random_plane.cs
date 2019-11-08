@@ -274,15 +274,51 @@ public class SpawnHotspots_cube_random_plane : MonoBehaviour {
 			trial_stopwatch.Start();
 			plane_stopwatch.Start();
 		}
-		else if (itr == 10) {
+        else if (itr == 9)
+        {
+            plane_1_time = plane_stopwatch.Elapsed;
+            plane_stopwatch.Reset();
+            //coords_temp = coOrds_collection[itr - 1]; // Copy the previous coordinate in the list to determine last plane
+            UnityEngine.Debug.Log("Plane 1: " + plane_1_time);
+
+            // Write time to file
+            File.AppendAllText(@path, "Trial 1" + " : ");
+            File.AppendAllText(@path, plane_1_time.ToString() + " " + "middle");
+            File.AppendAllText(@path, "\r\n");
+
+            // Begin plane 2 timing
+            UnityEngine.Debug.Log("Start plane 2 timing.");
+            plane_stopwatch.Start();
+        }
+        else if (itr == 10) {
 			// Begin plane 2 timing
+            /*
 			UnityEngine.Debug.Log( "Start plane 2 timing." );
 			plane_stopwatch.Start();
+            */
 		}
-		else if (itr == 19) {
+        else if (itr == 18)
+        {
+            plane_2_time = plane_stopwatch.Elapsed;
+            plane_stopwatch.Reset();
+            //coords_temp = coOrds_collection[itr - 1]; // Copy the previous coordinate in the list to determine last plane
+            UnityEngine.Debug.Log("Plane 2: " + plane_2_time);
+
+            // Write time to file
+            File.AppendAllText(@path, "Trial 2" + " : ");
+            File.AppendAllText(@path, plane_2_time.ToString() + " " + "middle");
+            File.AppendAllText(@path, "\r\n");
+
+            // Begin plane 3 timing
+            UnityEngine.Debug.Log("Start plane 3 timing.");
+            plane_stopwatch.Start();
+        }
+        else if (itr == 19) {
 			// Begin plane 3 timing
+            /*
 			UnityEngine.Debug.Log( "Start plane 3 timing." );
 			plane_stopwatch.Start();
+            */
 		}
 
 		CoOrds coords_temp = new CoOrds (); 				
@@ -311,6 +347,7 @@ public class SpawnHotspots_cube_random_plane : MonoBehaviour {
 			}
 
 			// Plane timing
+            /*
 			if (itr == 9) {
 				plane_1_time = plane_stopwatch.Elapsed; 
 				plane_stopwatch.Reset();
@@ -333,12 +370,13 @@ public class SpawnHotspots_cube_random_plane : MonoBehaviour {
 				File.AppendAllText(@path, plane_2_time.ToString() + " " + coords_temp.plane);
 				File.AppendAllText(@path, "\r\n");
 			}
+            */
 				
 			itr++;
 		}
 		/* Start new trial and update counter */
 		else {
-		//UnityEngine.Debug.Log( "Starting a new trial!" );
+		UnityEngine.Debug.Log( "Starting a new trial!" );
 
 			trial++;
 
@@ -353,12 +391,13 @@ public class SpawnHotspots_cube_random_plane : MonoBehaviour {
 			trial_stopwatch.Reset();
 
 			// Write plane time to file
-			File.AppendAllText(@path, "Plane 3" + " : ");
+			File.AppendAllText(@path, "Trial 3" + " : ");
 			File.AppendAllText(@path, plane_3_time.ToString() + " " + coords_temp.plane);
 			File.AppendAllText(@path, "\r\n");
 
-			// Write trial time to file
-			File.AppendAllText(@path, "Trial " + trial + " : ");
+            // Write trial time to file
+            //File.AppendAllText(@path, "Trial " + trial + " : ");
+            File.AppendAllText(@path, "Sum   : ");
 			File.AppendAllText(@path, trial_time.ToString());
 			File.AppendAllText(@path, "\r\n");
 
