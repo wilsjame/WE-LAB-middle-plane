@@ -301,6 +301,8 @@ public class SpawnHotspots_cube_random_plane : MonoBehaviour {
             Transform local_trial_counter = Instantiate(trial_counter, new Vector3(coords_temp.x, coords_temp.y, coords_temp.z), Quaternion.identity, this.transform); // Make this gameObject the parent
             local_trial_counter.localPosition = new Vector3(coords_temp.x, coords_temp.y, coords_temp.z); // Spawn position relative to parent
             UnityEngine.Debug.Log("Trial " + trial + " completed!");
+
+            reset();
         }
         else if (itr == 10) {
 			// Begin plane 2 timing
@@ -335,6 +337,8 @@ public class SpawnHotspots_cube_random_plane : MonoBehaviour {
             Transform local_trial_counter = Instantiate(trial_counter, new Vector3(coords_temp.x, coords_temp.y, coords_temp.z), Quaternion.identity, this.transform); // Make this gameObject the parent
             local_trial_counter.localPosition = new Vector3(coords_temp.x, coords_temp.y, coords_temp.z); // Spawn position relative to parent
             UnityEngine.Debug.Log("Trial " + trial + " completed!");
+
+            reset();
         }
         else if (itr == 19) {
 			// Begin plane 3 timing
