@@ -266,9 +266,10 @@ public class SpawnHotspots_cube_random_plane : MonoBehaviour {
 	 * the next plane's points are filled until all three planes are complete. */
 	public void HotSpotTriggerInstantiate ()
 	{
+        CoOrds coords_temp = new CoOrds();
 
-		/* check if user has tapped first point */
-		if (itr == 1) {
+        /* check if user has tapped first point */
+        if (itr == 1) {
 			// Begin trial and plane 1 timing
 			UnityEngine.Debug.Log( "Start a trial and plane 1 timing." );
 			trial_stopwatch.Start();
@@ -289,6 +290,17 @@ public class SpawnHotspots_cube_random_plane : MonoBehaviour {
             // Begin plane 2 timing
             UnityEngine.Debug.Log("Start plane 2 timing.");
             plane_stopwatch.Start();
+
+            // Counter
+            trial++;
+
+            /* Copy counter location coordinates */
+            coords_temp = counter_collection[trial - 1];
+
+            /* Spawn counter */
+            Transform local_trial_counter = Instantiate(trial_counter, new Vector3(coords_temp.x, coords_temp.y, coords_temp.z), Quaternion.identity, this.transform); // Make this gameObject the parent
+            local_trial_counter.localPosition = new Vector3(coords_temp.x, coords_temp.y, coords_temp.z); // Spawn position relative to parent
+            UnityEngine.Debug.Log("Trial " + trial + " completed!");
         }
         else if (itr == 10) {
 			// Begin plane 2 timing
@@ -312,6 +324,17 @@ public class SpawnHotspots_cube_random_plane : MonoBehaviour {
             // Begin plane 3 timing
             UnityEngine.Debug.Log("Start plane 3 timing.");
             plane_stopwatch.Start();
+
+            // Counter
+            trial++;
+
+            /* Copy counter location coordinates */
+            coords_temp = counter_collection[trial - 1];
+
+            /* Spawn counter */
+            Transform local_trial_counter = Instantiate(trial_counter, new Vector3(coords_temp.x, coords_temp.y, coords_temp.z), Quaternion.identity, this.transform); // Make this gameObject the parent
+            local_trial_counter.localPosition = new Vector3(coords_temp.x, coords_temp.y, coords_temp.z); // Spawn position relative to parent
+            UnityEngine.Debug.Log("Trial " + trial + " completed!");
         }
         else if (itr == 19) {
 			// Begin plane 3 timing
@@ -321,7 +344,7 @@ public class SpawnHotspots_cube_random_plane : MonoBehaviour {
             */
 		}
 
-		CoOrds coords_temp = new CoOrds (); 				
+		//CoOrds coords_temp = new CoOrds (); 				
 		
 		/* Begin spawning */
 		if (itr < coOrds_collection.Count) {
