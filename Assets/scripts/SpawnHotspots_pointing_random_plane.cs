@@ -86,7 +86,7 @@ public class SpawnHotspots_pointing_random_plane : MonoBehaviour {
 		/* z = 0 frame */
 		for (i = 0; i < numberOfObjects; i++) {
 			float angle = i * Mathf.PI * 2 / numberOfObjects;
-			CoOrds pos = new CoOrds(Mathf.Cos(angle) * radius, Mathf.Sin(angle) * radius, 0, "back");
+			CoOrds pos = new CoOrds(Mathf.Cos(angle) * radius, Mathf.Sin(angle) * radius, 0.3f, "middle");
 			coOrds_collection_1.Add(pos);
 		}
 
@@ -120,7 +120,7 @@ public class SpawnHotspots_pointing_random_plane : MonoBehaviour {
 		/* z = 0.6 frame */
 		for (i = 0; i < numberOfObjects; i++) {
 			float angle = i * Mathf.PI * 2 / numberOfObjects;
-			CoOrds pos = new CoOrds(Mathf.Cos(angle) * radius, Mathf.Sin(angle) * radius, 0.6f, "front");
+			CoOrds pos = new CoOrds(Mathf.Cos(angle) * radius, Mathf.Sin(angle) * radius, 0.3f, "middle");
 			coOrds_collection_3.Add(pos);
 		}
 
