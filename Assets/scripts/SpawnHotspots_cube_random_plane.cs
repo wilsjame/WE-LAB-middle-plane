@@ -248,6 +248,7 @@ public class SpawnHotspots_cube_random_plane : MonoBehaviour {
 		}
 
 		/* Spawn new cube collection */
+        /*
 		Transform local_cubes = Instantiate (cubes, new Vector3 (-0.3f, 0.3f, 0.3f), Quaternion.identity, this.transform); // Make this gameObject the parent
 		local_cubes.localPosition = new Vector3 (-0.3f, 0.3f, 0.3f); // Spawn position relative to parent
 
@@ -255,6 +256,7 @@ public class SpawnHotspots_cube_random_plane : MonoBehaviour {
 
 		shuffle (ref coOrds_collection, ref coOrds_collection_1, ref coOrds_collection_2, ref coOrds_collection_3);
 		HotSpotTriggerInstantiate ();
+        */
 	}
 
 	/* This function is called from Hotspot.cs after Start ().
