@@ -84,23 +84,23 @@ public class SpawnHotspots_cube_random_plane : MonoBehaviour {
 
 		/* Create all the data points and add them to the list */
 		/* z = 0 frame				 (x, y, z) */
-		CoOrds coords_1 = new CoOrds (0, 0, 0, "front");
+		CoOrds coords_1 = new CoOrds (0, 0, 0.3f, "middle");
 		coOrds_collection_1.Add (coords_1);
-		CoOrds coords_2 = new CoOrds (0.3f, 0, 0, "front");
+		CoOrds coords_2 = new CoOrds (0.3f, 0, 0.3f, "middle");
 		coOrds_collection_1.Add (coords_2);
-		CoOrds coords_3 = new CoOrds (0.6f, 0, 0, "front");
+		CoOrds coords_3 = new CoOrds (0.6f, 0, 0.3f, "middle");
 		coOrds_collection_1.Add (coords_3);
-		CoOrds coords_4 = new CoOrds (0, 0.3f, 0, "front");
+		CoOrds coords_4 = new CoOrds (0, 0.3f, 0.3f, "middle");
 		coOrds_collection_1.Add (coords_4);
-		CoOrds coords_5 = new CoOrds (0.3f, 0.3f, 0, "front");
+		CoOrds coords_5 = new CoOrds (0.3f, 0.3f, 0.3f, "middle");
 		coOrds_collection_1.Add (coords_5);
-		CoOrds coords_6 = new CoOrds (0.6f, 0.3f, 0, "front");
+		CoOrds coords_6 = new CoOrds (0.6f, 0.3f, 0.3f, "middle");
 		coOrds_collection_1.Add (coords_6);
-		CoOrds coords_7 = new CoOrds (0, 0.6f, 0, "front");
+		CoOrds coords_7 = new CoOrds (0, 0.6f, 0.3f, "middle");
 		coOrds_collection_1.Add (coords_7);
-		CoOrds coords_8 = new CoOrds (0.3f, 0.6f, 0, "front");
+		CoOrds coords_8 = new CoOrds (0.3f, 0.6f, 0.3f, "middle");
 		coOrds_collection_1.Add (coords_8);
-		CoOrds coords_9 = new CoOrds (0.6f, 0.6f, 0, "front");
+		CoOrds coords_9 = new CoOrds (0.6f, 0.6f, 0.3f, "middle");
 		coOrds_collection_1.Add (coords_9);
 
 		/* z = 0.3 frame			  (x, y, z) */
@@ -124,23 +124,23 @@ public class SpawnHotspots_cube_random_plane : MonoBehaviour {
 		coOrds_collection_2.Add (coords_18);
 
 		/* z = 0.6 frame			  (x, y, z) */
-		CoOrds coords_19 = new CoOrds (0, 0, 0.6f, "back");
+		CoOrds coords_19 = new CoOrds (0, 0, 0.3f, "middle");
 		coOrds_collection_3.Add (coords_19);
-		CoOrds coords_20 = new CoOrds (0.3f, 0, 0.6f, "back");
+		CoOrds coords_20 = new CoOrds (0.3f, 0, 0.3f, "middle");
 		coOrds_collection_3.Add (coords_20);
-		CoOrds coords_21 = new CoOrds (0.6f, 0, 0.6f, "back");
+		CoOrds coords_21 = new CoOrds (0.6f, 0, 0.3f, "middle");
 		coOrds_collection_3.Add (coords_21);
-		CoOrds coords_22 = new CoOrds (0, 0.3f, 0.6f, "back");
+		CoOrds coords_22 = new CoOrds (0, 0.3f, 0.3f, "middle");
 		coOrds_collection_3.Add (coords_22);
-		CoOrds coords_23 = new CoOrds (0.3f, 0.3f, 0.6f, "back");
+		CoOrds coords_23 = new CoOrds (0.3f, 0.3f, 0.3f, "middle");
 		coOrds_collection_3.Add (coords_23);
-		CoOrds coords_24 = new CoOrds (0.6f, 0.3f, 0.6f, "back");
+		CoOrds coords_24 = new CoOrds (0.6f, 0.3f, 0.3f, "middle");
 		coOrds_collection_3.Add (coords_24);
-		CoOrds coords_25 = new CoOrds (0, 0.6f, 0.6f, "back");
+		CoOrds coords_25 = new CoOrds (0, 0.6f, 0.3f, "middle");
 		coOrds_collection_3.Add (coords_25);
-		CoOrds coords_26 = new CoOrds (0.3f, 0.6f, 0.6f, "back");
+		CoOrds coords_26 = new CoOrds (0.3f, 0.6f, 0.3f, "middle");
 		coOrds_collection_3.Add (coords_26);
-		CoOrds coords_27 = new CoOrds (0.6f, 0.6f, 0.6f, "back");
+		CoOrds coords_27 = new CoOrds (0.6f, 0.6f, 0.3f, "middle");
 		coOrds_collection_3.Add (coords_27);
 
 		//UnityEngine.Debug.Log ("Shuffling spawn points within planes...");
@@ -287,7 +287,7 @@ public class SpawnHotspots_cube_random_plane : MonoBehaviour {
 		
 		/* Begin spawning */
 		if (itr < coOrds_collection.Count) {
-		//UnityEngine.Debug.Log ("coOrds_collection count: " + coOrds_collection.Count + " itr: " + itr);
+		UnityEngine.Debug.Log ("coOrds_collection count: " + coOrds_collection.Count + " itr: " + itr);
 			
 			/* Copy the next coordinate in the list to the temp variable */
 			coords_temp = coOrds_collection [itr];
