@@ -51,6 +51,9 @@ public class HotspotColorChanger : MonoBehaviour
 		
         /* Disable hand dragging */
         cube.GetComponent<HandDraggable>().enabled = false;
+
+        /* Allow cubes behind placed cubes to be grabbed */
+        cube.GetComponent<Collider>().enabled = false;
     }
 
     private void OnHotspotExit(GameObject cube)
