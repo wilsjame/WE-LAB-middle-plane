@@ -269,7 +269,11 @@ public class SpawnHotspots_pointing_random_plane : MonoBehaviour {
 			File.AppendAllText(@path, "Trial " + plane + " : ");
 			File.AppendAllText(@path, plane_time.ToString() + " " + GameObject.Find("static_point(Clone)").GetComponent<StaticSpot>().plane);
 			File.AppendAllText(@path, "\r\n");
-		}
+
+            // Spawn counter
+            coords_temp = counter_collection[plane - 1];
+            Instantiate(trial_counter, new Vector3(coords_temp.x, coords_temp.y, coords_temp.z), Quaternion.identity);
+        }
 		/* Start new trial and spawn counter */
 		else if (trial < 3) {
 
@@ -285,14 +289,20 @@ public class SpawnHotspots_pointing_random_plane : MonoBehaviour {
 			File.AppendAllText(@path, plane_time.ToString() + " " + GameObject.Find("static_point(Clone)").GetComponent<StaticSpot>().plane);
 			File.AppendAllText(@path, "\r\n");
 
-			// Spawn trial counter
+            // Spawn trial counter
+            /*
 			trial++;
 			UnityEngine.Debug.Log("Trial " + trial + " completed!");
 			coords_temp = counter_collection [trial - 1];
 			Instantiate (trial_counter, new Vector3 (coords_temp.x, coords_temp.y, coords_temp.z), Quaternion.identity);
+            */
 
-			// Stop trial timing
-			System.TimeSpan trial_time = trial_stopwatch.Elapsed;
+            // Spawn counter
+            coords_temp = counter_collection[plane - 1];
+            Instantiate(trial_counter, new Vector3(coords_temp.x, coords_temp.y, coords_temp.z), Quaternion.identity);
+
+            // Stop trial timing
+            System.TimeSpan trial_time = trial_stopwatch.Elapsed;
 			trial_stopwatch.Stop();
 			UnityEngine.Debug.Log("Trial " + trial + " : " + trial_time);
 			trial_stopwatch.Reset();
