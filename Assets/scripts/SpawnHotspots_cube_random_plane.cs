@@ -271,7 +271,7 @@ public class SpawnHotspots_cube_random_plane : MonoBehaviour {
         /* check if user has tapped first point */
         if (itr == 1) {
 			// Begin trial and plane 1 timing
-			UnityEngine.Debug.Log( "Start a trial and plane 1 timing." );
+			UnityEngine.Debug.Log( "Start a trial 1 timing." );
 			trial_stopwatch.Start();
 			plane_stopwatch.Start();
 		}
@@ -280,16 +280,18 @@ public class SpawnHotspots_cube_random_plane : MonoBehaviour {
             plane_1_time = plane_stopwatch.Elapsed;
             plane_stopwatch.Reset();
             //coords_temp = coOrds_collection[itr - 1]; // Copy the previous coordinate in the list to determine last plane
-            UnityEngine.Debug.Log("Plane 1: " + plane_1_time);
+            UnityEngine.Debug.Log("Trial 1: " + plane_1_time);
 
             // Write time to file
             File.AppendAllText(@path, "Trial 1" + " : ");
             File.AppendAllText(@path, plane_1_time.ToString() + " " + "middle");
             File.AppendAllText(@path, "\r\n");
 
-            // Begin plane 2 timing
+            // Begin plan 2 timing
+            /*
             UnityEngine.Debug.Log("Start plane 2 timing.");
             plane_stopwatch.Start();
+            */
 
             // Counter
             trial++;
@@ -306,17 +308,15 @@ public class SpawnHotspots_cube_random_plane : MonoBehaviour {
         }
         else if (itr == 10) {
 			// Begin plane 2 timing
-            /*
-			UnityEngine.Debug.Log( "Start plane 2 timing." );
+			UnityEngine.Debug.Log( "Start trial 2 timing." );
 			plane_stopwatch.Start();
-            */
 		}
         else if (itr == 18)
         {
             plane_2_time = plane_stopwatch.Elapsed;
             plane_stopwatch.Reset();
             //coords_temp = coOrds_collection[itr - 1]; // Copy the previous coordinate in the list to determine last plane
-            UnityEngine.Debug.Log("Plane 2: " + plane_2_time);
+            UnityEngine.Debug.Log("Trial 2: " + plane_2_time);
 
             // Write time to file
             File.AppendAllText(@path, "Trial 2" + " : ");
@@ -324,8 +324,10 @@ public class SpawnHotspots_cube_random_plane : MonoBehaviour {
             File.AppendAllText(@path, "\r\n");
 
             // Begin plane 3 timing
+            /*
             UnityEngine.Debug.Log("Start plane 3 timing.");
             plane_stopwatch.Start();
+            */
 
             // Counter
             trial++;
@@ -342,10 +344,8 @@ public class SpawnHotspots_cube_random_plane : MonoBehaviour {
         }
         else if (itr == 19) {
 			// Begin plane 3 timing
-            /*
-			UnityEngine.Debug.Log( "Start plane 3 timing." );
+			UnityEngine.Debug.Log( "Start trial 3 timing." );
 			plane_stopwatch.Start();
-            */
 		}
 
 		//CoOrds coords_temp = new CoOrds (); 				
@@ -413,7 +413,7 @@ public class SpawnHotspots_cube_random_plane : MonoBehaviour {
 			plane_3_time = plane_stopwatch.Elapsed; 
 			plane_stopwatch.Reset();
 			coords_temp = coOrds_collection [itr - 1]; // Copy the previous coordinate in the list to determine last plane
-			UnityEngine.Debug.Log("Plane 3: " + coords_temp.plane + " " + plane_3_time);
+			UnityEngine.Debug.Log("Trial 3: " + coords_temp.plane + " " + plane_3_time);
 			UnityEngine.Debug.Log("Trial " + trial + ": " + trial_time);
 			trial_stopwatch.Reset();
 
@@ -424,9 +424,11 @@ public class SpawnHotspots_cube_random_plane : MonoBehaviour {
 
             // Write trial time to file
             //File.AppendAllText(@path, "Trial " + trial + " : ");
+            /*
             File.AppendAllText(@path, "Sum   : ");
 			File.AppendAllText(@path, trial_time.ToString());
 			File.AppendAllText(@path, "\r\n");
+            */
 
 			/* Copy counter location coordinates */
 			coords_temp = counter_collection [trial - 1];
