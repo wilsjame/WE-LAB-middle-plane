@@ -233,13 +233,15 @@ public class SpawnHotspots_pointing_random_plane : MonoBehaviour {
 		/* Check if user has tapped first point */
 		if (itr == 1 && plane == 0) {
 
-			// Start timers
-			trial_stopwatch.Start();
+            // Start timers
+            UnityEngine.Debug.Log("Start trial 1 timing.");
+            trial_stopwatch.Start();
 			plane_stopwatch.Start();
 		}
 		else if (itr == 1) {
 
-			// Start each plane timer when the plane's first trigger point is activated
+            // Start each plane timer when the plane's first trigger point is activated
+            UnityEngine.Debug.Log("[trace] Start trial " + (plane + 1) + " timing.");
 			plane_stopwatch.Start();
 		}
 		
@@ -259,11 +261,12 @@ public class SpawnHotspots_pointing_random_plane : MonoBehaviour {
 			// Stop plane timing
 			plane_time = plane_stopwatch.Elapsed;
 			plane_stopwatch.Stop();
-			UnityEngine.Debug.Log("Plane " + plane + " : " + plane_time + " " + GameObject.Find("static_point(Clone)").GetComponent<StaticSpot>().plane);
-			plane_stopwatch.Reset();
+            //UnityEngine.Debug.Log("Plane " + plane + " : " + plane_time + " " + GameObject.Find("static_point(Clone)").GetComponent<StaticSpot>().plane);
+            UnityEngine.Debug.Log("Trial " + plane + " : " + plane_time + " " + GameObject.Find("static_point(Clone)").GetComponent<StaticSpot>().plane);
+            plane_stopwatch.Reset();
 
 			// Write plane time to file
-			File.AppendAllText(@path, "Plane " + plane + " : ");
+			File.AppendAllText(@path, "Trial " + plane + " : ");
 			File.AppendAllText(@path, plane_time.ToString() + " " + GameObject.Find("static_point(Clone)").GetComponent<StaticSpot>().plane);
 			File.AppendAllText(@path, "\r\n");
 		}
@@ -273,11 +276,12 @@ public class SpawnHotspots_pointing_random_plane : MonoBehaviour {
 			// Stop plane timing
 			System.TimeSpan plane_time = plane_stopwatch.Elapsed;
 			plane_stopwatch.Stop();
-			UnityEngine.Debug.Log("Plane " + plane + " : " + plane_time + " " + GameObject.Find("static_point(Clone)").GetComponent<StaticSpot>().plane);
-			plane_stopwatch.Reset();
+            //UnityEngine.Debug.Log("Plane " + plane + " : " + plane_time + " " + GameObject.Find("static_point(Clone)").GetComponent<StaticSpot>().plane);
+            UnityEngine.Debug.Log("Trial " + plane + " : " + plane_time + " " + GameObject.Find("static_point(Clone)").GetComponent<StaticSpot>().plane);
+            plane_stopwatch.Reset();
 
 			// Write plane time to file
-			File.AppendAllText(@path, "Plane " + plane + " : ");
+			File.AppendAllText(@path, "Trial " + plane + " : ");
 			File.AppendAllText(@path, plane_time.ToString() + " " + GameObject.Find("static_point(Clone)").GetComponent<StaticSpot>().plane);
 			File.AppendAllText(@path, "\r\n");
 
@@ -293,19 +297,25 @@ public class SpawnHotspots_pointing_random_plane : MonoBehaviour {
 			UnityEngine.Debug.Log("Trial " + trial + " : " + trial_time);
 			trial_stopwatch.Reset();
 
-			// Write trial time to file
-			File.AppendAllText(@path, "Trial " + trial + " : ");
-			File.AppendAllText(@path, trial_time.ToString());
+            UnityEngine.Debug.Log("END");
+            
+            // Write trial time to file
+            //File.AppendAllText(@path, "Trial " + trial + " : ");
+            /*
+            File.AppendAllText(@path, "Sum     : ");
+            File.AppendAllText(@path, trial_time.ToString());
 			File.AppendAllText(@path, "\r\n");
+            */
 
-			// Do not time after third trial
+            // Do not time after third trial
+            /*
 			if (trial < 3) {
 
 				// Shuffle plane order before new trial 
 				for (i = 0; i < 3; i++) {
 					random_placeholder = i + Random.Range (0, 3 - i);
 
-					/* Swap */
+					// Swap
 					temp = order[i];
 					order[i] = order[random_placeholder];
 					order[random_placeholder] = temp;
@@ -317,8 +327,9 @@ public class SpawnHotspots_pointing_random_plane : MonoBehaviour {
 			else {
 				UnityEngine.Debug.Log("END");
 			}
+            */
 
-		}
+        }
 
 	}
 
