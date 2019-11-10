@@ -83,7 +83,7 @@ namespace HoloToolkit.Unity.InputModule
 		{
 			GetComponent<Renderer>().material.color = Color.red;
 		}
-		else if (m_Scene.name == "pointing random plane")
+		else if (m_Scene.name == "pointing middle plane")
 		{
 			GetComponent<Renderer>().material.color = Color.white;
 		}
@@ -122,7 +122,7 @@ namespace HoloToolkit.Unity.InputModule
 		{
 			GameObject.Find ("SpawnHotSpots").GetComponent<SpawnHotspots_pointing> ().HotSpotTriggerInstantiate ();
 		}
-		else if (m_Scene.name == "pointing random plane")
+		else if (m_Scene.name == "pointing middle plane")
 		{
 			GameObject.Find ("SpawnHotSpots").GetComponent<SpawnHotspots_pointing_random_plane> ().HotSpotTriggerInstantiate ();
 
