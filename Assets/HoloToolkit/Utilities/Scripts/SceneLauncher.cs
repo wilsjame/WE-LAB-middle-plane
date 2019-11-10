@@ -73,6 +73,19 @@ namespace HoloToolkit.Unity
 
             for (int sceneIndex = 0; sceneIndex < sceneMapping.Length; ++sceneIndex)
             {
+
+                //UnityEngine.Debug.Log("sceneIndex: " + sceneIndex + " " + sceneMapping[sceneIndex].ScenePath + " is enabled: " + sceneMapping[sceneIndex].IsButtonEnabled);
+
+                // Check scene name and enable
+                if (sceneMapping[sceneIndex].ScenePath == "Assets/scenes/cube middle plane.unity")
+                {
+                    sceneMapping[sceneIndex].IsButtonEnabled = true;
+                }
+                else if (sceneMapping[sceneIndex].ScenePath == "Assets/scenes/pointing middle plane.unity")
+                {
+                    sceneMapping[sceneIndex].IsButtonEnabled = true;
+                }
+
                 if (sceneMapping[sceneIndex].IsButtonEnabled)
                 {
                     CreateSceneButton(ButtonSpawnLocation, sceneIndex);
