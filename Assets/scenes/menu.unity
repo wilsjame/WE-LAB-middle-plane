@@ -220,7 +220,7 @@ Prefab:
     - target: {fileID: 114669922776097872, guid: a3f14aa6417acfa4ea1c4feb6af974ab,
         type: 2}
       propertyPath: sceneMapping.Array.size
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4856770467070142, guid: a3f14aa6417acfa4ea1c4feb6af974ab, type: 2}
       propertyPath: m_LocalPosition.x
@@ -272,12 +272,12 @@ Prefab:
     - target: {fileID: 114669922776097872, guid: a3f14aa6417acfa4ea1c4feb6af974ab,
         type: 2}
       propertyPath: sceneMapping.Array.data[2].ScenePath
-      value: Assets/scenes/cube.unity
+      value: Assets/scenes/cube middle plane.unity
       objectReference: {fileID: 0}
     - target: {fileID: 114669922776097872, guid: a3f14aa6417acfa4ea1c4feb6af974ab,
         type: 2}
       propertyPath: sceneMapping.Array.data[3].ScenePath
-      value: Assets/scenes/cube middle plane.unity
+      value: Assets/scenes/pointing middle plane.unity
       objectReference: {fileID: 0}
     - target: {fileID: 114669922776097872, guid: a3f14aa6417acfa4ea1c4feb6af974ab,
         type: 2}
@@ -292,7 +292,7 @@ Prefab:
     - target: {fileID: 114669922776097872, guid: a3f14aa6417acfa4ea1c4feb6af974ab,
         type: 2}
       propertyPath: sceneMapping.Array.data[2].IsButtonEnabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114669922776097872, guid: a3f14aa6417acfa4ea1c4feb6af974ab,
         type: 2}
@@ -322,10 +322,17 @@ Prefab:
     - target: {fileID: 102639908367590550, guid: a3f14aa6417acfa4ea1c4feb6af974ab,
         type: 2}
       propertyPath: m_Text
-      value: 'Air tap a task to load it.
+      value: '               Air tap a task to load it.
 
-        When finished with a task, say "Scene Launcher" or press the Backspace key
-        to return the this list.'
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721688395428170, guid: a3f14aa6417acfa4ea1c4feb6af974ab, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214481129452270, guid: a3f14aa6417acfa4ea1c4feb6af974ab, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a3f14aa6417acfa4ea1c4feb6af974ab, type: 2}
