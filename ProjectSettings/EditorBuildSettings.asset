@@ -12,14 +12,8 @@ EditorBuildSettings:
     path: Assets/scenes/menu.unity
     guid: 2c26723949d23bc478db161e3a140e0e
   - enabled: 1
-    path: Assets/scenes/cube.unity
-    guid: 489ee1b526be0994785a5b52555b53d8
-  - enabled: 1
-    path: Assets/scenes/cube random plane.unity
+    path: Assets/scenes/cube middle plane.unity
     guid: 4d3f9ec249fa41448bc6144b0f20ee64
   - enabled: 1
-    path: Assets/scenes/pointing.unity
-    guid: a6d328d29146d4c44a976a35d6106fae
-  - enabled: 1
-    path: Assets/scenes/pointing random plane.unity
+    path: Assets/scenes/pointing middle plane.unity
     guid: 9d2407f179eb99d41945b17f6baa20bc

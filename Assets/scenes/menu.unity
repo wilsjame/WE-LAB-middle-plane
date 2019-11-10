@@ -277,7 +277,7 @@ Prefab:
     - target: {fileID: 114669922776097872, guid: a3f14aa6417acfa4ea1c4feb6af974ab,
         type: 2}
       propertyPath: sceneMapping.Array.data[3].ScenePath
-      value: Assets/scenes/cube random plane.unity
+      value: Assets/scenes/cube middle plane.unity
       objectReference: {fileID: 0}
     - target: {fileID: 114669922776097872, guid: a3f14aa6417acfa4ea1c4feb6af974ab,
         type: 2}
@@ -297,7 +297,7 @@ Prefab:
     - target: {fileID: 114669922776097872, guid: a3f14aa6417acfa4ea1c4feb6af974ab,
         type: 2}
       propertyPath: sceneMapping.Array.data[3].IsButtonEnabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114669922776097872, guid: a3f14aa6417acfa4ea1c4feb6af974ab,
         type: 2}
@@ -307,12 +307,12 @@ Prefab:
     - target: {fileID: 114669922776097872, guid: a3f14aa6417acfa4ea1c4feb6af974ab,
         type: 2}
       propertyPath: sceneMapping.Array.data[5].ScenePath
-      value: Assets/scenes/pointing random plane.unity
+      value: Assets/scenes/pointing middle plane.unity
       objectReference: {fileID: 0}
     - target: {fileID: 114669922776097872, guid: a3f14aa6417acfa4ea1c4feb6af974ab,
         type: 2}
       propertyPath: sceneMapping.Array.data[5].IsButtonEnabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 102150211965573986, guid: a3f14aa6417acfa4ea1c4feb6af974ab,
         type: 2}
