@@ -310,7 +310,7 @@ namespace HoloToolkit.Examples.InteractiveElements
 		    // addition
 		    // Truncate float to two decmial places */
 		    //Debug.Log(SliderValue);
-		    Label.text = SliderValue.ToString("F2");
+		    Label.text = SliderValue.ToString("F3");
                 }
             }
         }
