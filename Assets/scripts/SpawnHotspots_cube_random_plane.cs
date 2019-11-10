@@ -38,8 +38,8 @@ public class SpawnHotspots_cube_random_plane : MonoBehaviour {
 	public int itr = 0;					/* Keep track of list iterations */
 	public int trial = 0;					/* Keep track of completed trials */
 
-	public string fileName = "cube_random_plane_task_time_";
-	public string path;
+	private string fileName = "cube_middle_plane_task_time_";
+	private string path;
 
 	public Stopwatch trial_stopwatch = new Stopwatch();
 	public Stopwatch plane_stopwatch = new Stopwatch();

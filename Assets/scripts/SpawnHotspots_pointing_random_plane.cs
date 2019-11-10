@@ -43,8 +43,8 @@ public class SpawnHotspots_pointing_random_plane : MonoBehaviour {
 	public int plane = 0;					/* Keep track of completed planes */
 	public int trial = 0;					/* Keep track of completed trials */
 
-	public string fileName = "pointing_random_plane_task_time_";
-	public string path;
+	private string fileName = "pointing_middle_plane_task_time_";
+	private string path;
 
 	public Stopwatch trial_stopwatch = new Stopwatch();
 	public Stopwatch plane_stopwatch = new Stopwatch();
