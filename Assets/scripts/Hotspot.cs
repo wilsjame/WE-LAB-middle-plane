@@ -51,7 +51,7 @@ public class Hotspot : MonoBehaviour
 			{
 				GameObject.Find ("SpawnHotSpots").GetComponent<SpawnHotspots_cube> ().HotSpotTriggerInstantiate ();
 			}
-			else if (m_Scene.name == "cube random plane")
+			else if (m_Scene.name == "cube middle plane")
 			{
 				GameObject.Find ("SpawnHotSpots").GetComponent<SpawnHotspots_cube_random_plane> ().HotSpotTriggerInstantiate ();
 			}
